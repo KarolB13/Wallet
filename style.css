@@ -249,3 +249,8 @@ h2.title {
     cursor: pointer;
     transition: background-color .3s;
 }
+
+.add-transaction-panel button:hover {
+    background-color: rgb(25, 27, 51);
+
+}

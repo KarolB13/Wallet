@@ -1,132 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Wallet</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="style.css" />
-		<script
-			src="https://kit.fontawesome.com/c815e5e195.js"
-			crossorigin="anonymous"
-		></script>
-	</head>
-	<body>
-		<header>
-			<h1><i class="fas fa-wallet"></i> Wallet</h1>
-			<p>Your finance manager</p>
-		</header>
+<html lang="pl">
 
-		<main>
-			<section class="transactions">
-				<h2 class="title">Transaction List</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator wydatków</title>
 
-				<div class="transaction-list">
-					<div class="income-area">
-						<h3>Income</h3>
-						<div class="transaction" id="0">
-							<p class="transaction-name">
-								<i class="fas fa-money-bill-wave"></i>Withdrawal
-							</p>
-							<p class="transaction-amount">
-								2000zł
-								<button class="delete"><i class="fas fa-times"></i></button>
-							</p>
-						</div>
-					</div>
-					<div class="expenses-area">
-						<h3>Spending</h3>
-						<div class="transaction" id="1">
-							<p class="transaction-name">
-								<i class="fas fa-cart-arrow-down"></i>Shopping
-							</p>
-							<p class="transaction-amount">
-								-200zł
-								<button class="delete"><i class="fas fa-times"></i></button>
-							</p>
-						</div>
-						<div class="transaction" id="2">
-							<p class="transaction-name">
-								<i class="fas fa-hamburger"></i>Food
-							</p>
-							<p class="transaction-amount">
-								-100zł
-								<button class="delete"><i class="fas fa-times"></i></button>
-							</p>
-						</div>
-						<div class="transaction" id="3">
-							<p class="transaction-name"><i class="fas fa-film"></i>Cienema</p>
-							<p class="transaction-amount">
-								-50zł
-								<button class="delete"><i class="fas fa-times"></i></button>
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
 
-			<section class="options">
-				<div>
-					<h2 class="title">Available resources:</h2>
-					<p class="available-money">0zł</p>
-				</div>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/327a0d490c.js" crossorigin="anonymous"></script>
+</head>
 
-				<div class="controls">
-					<button class="add-transaction">
-						<i class="fas fa-plus"></i>Add transaction
-					</button>
-					<button class="delate-all">
-						<i class="far fa-trash-alt"></i>Delete all
-					</button>
-				</div>
+<body>
 
-				<div class="style-selection">
-					<h2 class="title">Choose a style</h2>
-					<div class="color-buttons">
-						<button class="light"></button>
-						<button class="dark"></button>
-					</div>
-				</div>
-			</section>
-		</main>
+    <header>
+        <h1><i class="fas fa-wallet"></i> Wallet</h1>
+        <p>Twój osobisty menedżer finansów.</p>
+    </header>
 
-		<div class="add-transaction-panel">
-			<h2 class="title">Add new transaction</h2>
+    <main>
+        <section class="transactions">
+            <h2 class="title">Lista transakcji</h2>
+            <div class="transaction-list">
+                <div class="income-area">
+                    <h3>Przychód:</h3>
+                    <!-- <div class="transaction" id="0">
+                        <p class="transaction-name"><i class="fas fa-money-bill-wave"></i> Wypłata</p>
+                        <p class="transaction-amount">2000zł <button class="delete"><i
+                                    class="fas fa-times"></i></button></p>
+                    </div> -->
+                </div>
+                <div class="expenses-area">
+                    <h3>Wydatki:</h3>
+                    <!-- <div class="transaction" id="1">
+                        <p class="transaction-name"><i class="fas fa-cart-arrow-down"></i> Zakupy</p>
+                        <p class="transaction-amount">-400zł <button class="delete"><i
+                                    class="fas fa-times"></i></button></p>
+                    </div>
+                    <div class="transaction" id="2">
+                        <p class="transaction-name"><i class="fas fa-hamburger"></i> Jedzenie</p>
+                        <p class="transaction-amount">-100zł <button class="delete"><i
+                                    class="fas fa-times"></i></button></p>
+                    </div>
+                    <div class="transaction" id="3">
+                        <p class="transaction-name"><i class="fas fa-film"></i> Kino</p>
+                        <p class="transaction-amount">-50zł <button class="delete"><i class="fas fa-times"></i></button>
+                        </p>
+                    </div> -->
+                </div>
+            </div>
+        </section>
 
-			<label for="name">Name:</label>
-			<small> ( enter the name of the transaction)</small>
-			<input type="text" id="name" />
+        <section class="options">
+            <div>
+                <h2 class="title">Dostępne środki:</h2>
+                <p class="available-money">0zł</p>
+            </div>
+            <div class="controls">
+                <button class="add-transaction"><i class="fas fa-plus"></i> Dodaj transakcję</button>
+                <button class="delete-all"><i class="far fa-trash-alt"></i> Usuń wszystko</button>
+            </div>
+            <div class="style-selection">
+                <h2 class="title">Wybierz styl:</h2>
+                <div class="color-buttons">
+                    <button class="light"></button>
+                    <button class="dark"></button>
+                </div>
+            </div>
+        </section>
+    </main>
 
-			<label for="amount">Amount:</label>
-			<small>
-				( Enter the amount, if it's an expense enter a minus sign at the
-				beginning)</small
-			>
-			<input type="number" id="amount" />
+    <div class="add-transaction-panel">
+        <h2 class="title">Dodaj nową transakcję</h2>
+        <label for="name">Nazwa:</label>
+        <small>(podaj nazwę transakcji)</small>
+        <input type="text" id="name"></input>
 
-			<label for="category">Choose category</label>
-			<small> ( "+" means Income and "-" means expense)</small>
-			<select id="category">
-				<option value="none" selected disabled></option>
-				<option value="income">"+" Income</option>
-				<option value="shopping">"-" Schopping</option>
-				<option value="food">"-" Food</option>
-				<option value="cinema">"-" Cinema</option>
-			</select>
+        <label for="amount">Kwota:</label>
+        <small>(podaj kwotę transakcji, jeśli dodajesz wydatek, postaw znak minusa na początku kwoty) </small>
+        <input type="number" id="amount">
 
-			<div class="panel-buttons">
-				<button class="save"><i class="fas fa-save"></i>Save</button>
-				<button class="cancel">
-					<i class="far fa-window-close"></i>Cancel
-				</button>
-			</div>
-		</div>
+        <label for="category">Wybierz kategorię:</label>
+        <small>( [ + ] oznacza przychód, [ - ] oznacza wydatek)</small>
+        <select id="category" onchange="selectCategory()">
+            <option value="none" selected disabled></option>
+            <option value="income">[ + ] Przychód</option>
+            <option value="shopping">[ - ] Zakupy</option>
+            <option value="food">[ - ] Jedzenie</option>
+            <option value="cinema">[ - ] Kino</option>
+        </select>
 
-		<script src="app.js"></script>
-	</body>
+        <div class="panel-buttons">
+            <button class="save"><i class="fas fa-save"></i> Zapisz</button>
+            <button class="cancel"><i class="far fa-window-close"></i> Anuluj</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
 </html>
